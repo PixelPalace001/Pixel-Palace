@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Home Page - Pixel Palace</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+<body>
+    <h2 style="text-align:center; padding:1px"></h2>
+
+    <nav aria-label="Main navigation">
+      <div class="logo">
+        <img src="images/logo.png" alt="Pixel Palace Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="homepage.html" aria-label="Go to Home page">Home</a></li>
+        <li><a href="products.html" aria-label="View Products page">Products</a></li>
+        <li><a href="about.html" aria-label="Learn more About Us">About Us</a></li>
+        <li><a href="contact.html" aria-label="Open Contact Us page">Contact Us</a></li>
+        <li><a href="signup.html" aria-label="Go to Sign Up page">Sign Up</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="content">
+        <h1>Welcome to Pixel Palace</h1>
+        <a href="#" class="btn" aria-label="Explore Pixel Palace Games" onclick="scrollToGames(); return false;">Explore Now</a>
+        <a href="products.html" class="btn buy-btn" aria-label="Buy products from Pixel Palace">Buy Now</a>
+      </div>
+    </div>
+
+    <h2 id="popular-games">Popular Games</h2>
+    <section class="games-showcase" aria-label="Popular games showcase">
+      <div class="gamescard">
+        <img src="images/forza2.jpg" alt="Forza Horizon 5 cover art" aria-hidden="true">
+        <p>Forza Horizon 5</p>
+      </div>
+      <div class="gamescard">
+        <img src="images/fortnite2.jpg" alt="Fortnite">
+        <p>Fortnite</p>
+      </div>
+      <div class="gamescard">
+        <img src="images/warzone.jpg" alt="Call of Duty: Warzone">
+        <p>Call of Duty: Warzone</p>
+      </div>
+    </section>
+
+    <h2>Latest News</h2>
+    <section class="news-showcase" aria-label="Latest gaming news">
+      <div class="newscard">
+        <img src="images/uncharted.png" alt="Uncharted Leaks">
+        <p>Rumoured Uncharted Leaks</p>
+      </div>
+      <div class="newscard">
+        <img src="images/fifa2.png" alt="EA FC 27">
+        <p>Rumoured Leaks About Upcoming EA FC 27</p>
+      </div>
+      <div class="newscard">
+        <img src="images/forza.jpg" alt="Forza Horizon 6">
+        <p>Forza Horizon 6 Releasing In May</p>
+      </div>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-section" aria-label="About Pixel Palace">
+          <h3>Pixel Palace</h3>
+          <p>Your ultimate destination for games, gear, and gaming news.</p>
+        </div>
+
+        <div class="footer-section" aria-label="Quick Links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="homepage.html" aria-label="Go to Home page">Home</a></li>
+            <li><a href="products.html" aria-label="View Products page">Products</a></li>
+            <li><a href="about.html" aria-label="Learn more About Us">About Us</a></li>
+            <li><a href="contact.html" aria-label="Open Contact Us page">Contact Us</a></li>
+            <li><a href="signup.html" aria-label="Go to Sign Up page">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section" aria-label="Contact Information">
+          <h3>Contact</h3>
+          <p>Email: support@pixelpalace.com</p>
+          <br>
+          <p>Phone: (868) 791-8458</p>
+          <br>
+          <p>Location: #21 Sorzano Street, Arima.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Pixel Palace. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>
