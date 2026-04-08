@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sign Up - Pixel Palace</title>
-  <link rel="stylesheet" href="styles.css">
-  
-  <script src="java.js" defer></script>
-</head>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Home Page - Pixel Palace</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
 <body>
-   <h2 style="text-align:center; padding:1px"></h2>
+    <h2 style="text-align:center; padding:1px"></h2>
 
     <nav aria-label="Main navigation">
       <div class="logo">
@@ -23,29 +21,47 @@
       </ul>
     </nav>
 
-  <section class="signup">
-    <h2>Create Your Account</h2>
-    <form id="signupForm">
-      <label for="username">Username:</label>
-      <input type="text" id="username" required>
+    <div class="hero">
+      <div class="content">
+        <h1>Welcome to Pixel Palace</h1>
+        <a href="#" class="btn" aria-label="Explore Pixel Palace Games" onclick="scrollToGames(); return false;">Explore Now</a>
+        <a href="products.html" class="btn buy-btn" aria-label="Buy products from Pixel Palace">Buy Now</a>
+      </div>
+    </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
+    <h2 id="popular-games">Popular Games</h2>
+    <section class="games-showcase" aria-label="Popular games showcase">
+      <div class="gamescard">
+        <img src="images/forza2.jpg" alt="Forza Horizon 5 cover art" aria-hidden="true">
+        <p>Forza Horizon 5</p>
+      </div>
+      <div class="gamescard">
+        <img src="images/fortnite2.jpg" alt="Fortnite">
+        <p>Fortnite</p>
+      </div>
+      <div class="gamescard">
+        <img src="images/warzone.jpg" alt="Call of Duty: Warzone">
+        <p>Call of Duty: Warzone</p>
+      </div>
+    </section>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" required>
+    <h2>Latest News</h2>
+    <section class="news-showcase" aria-label="Latest gaming news">
+      <div class="newscard">
+        <img src="images/uncharted.png" alt="Uncharted Leaks">
+        <p>Rumoured Uncharted Leaks</p>
+      </div>
+      <div class="newscard">
+        <img src="images/fifa2.png" alt="EA FC 27">
+        <p>Rumoured Leaks About Upcoming EA FC 27</p>
+      </div>
+      <div class="newscard">
+        <img src="images/forza.jpg" alt="Forza Horizon 6">
+        <p>Forza Horizon 6 Releasing In May</p>
+      </div>
+    </section>
 
-      <label for="confirm">Confirm Password:</label>
-      <input type="password" id="confirm" required>
-
-      <button class="btn" type="submit">Sign Up</button>
-    </form>
-      <!-- Success message placeholder -->
-  <div id="successMessage" class="success-message"></div>
-</section>
-  </section>
-
- <footer class="footer" role="contentinfo">
+    <footer class="footer" role="contentinfo">
       <div class="footer-container">
         <div class="footer-section" aria-label="About Pixel Palace">
           <h3>Pixel Palace</h3>
