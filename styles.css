@@ -26,7 +26,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000; /* keeps nav above other elements */
-  
+
     height: 150px; overflow: visible;  
     padding: 30px 5%;
     background: rgba(0, 0, 0, 0.05);
@@ -742,4 +742,10 @@ a:focus, button:focus, input:focus, textarea:focus {
 
 .btn:focus {
   box-shadow: 0 0 10px #6a0dad;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 200px; /* more space for stacked nav */
+  }
 }
