@@ -17,9 +17,16 @@ body {
     justify-content: center;
     align-items: center;
     background-attachment: fixed; 
+    padding-top: 150px; /* equal to nav height */
 }
 nav {
     
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* keeps nav above other elements */
+  
     height: 150px; overflow: visible;  
     padding: 30px 5%;
     background: rgba(0, 0, 0, 0.05);
@@ -483,6 +490,10 @@ nav {
   box-shadow: 0 0 20px rgba(106, 13, 173, 0.6);
 }
 
+.about, .contact, .signup {
+  margin-top: 180px; /* pushes content below nav */
+}
+
 .about h2, .contact h2, .signup h2 {
   color: #6a0dad;
   margin-bottom: 20px;
@@ -637,80 +648,89 @@ form input, form textarea {
 
 
 /* -------- -THIS IS FOR THE DESKTOP | TABLET | PHONE ---------*/
-
-/* TABLET  */
-@media (max-width: 1024px) {
+/* Desktop (force row layout) */
+@media (min-width: 1025px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .nav-links {
-    gap: 15px;
-    font-size: 0.95rem;
+    flex-direction: row;
+    gap: 30px;
   }
-
-  .games-showcase, .news-showcase {
-    gap: 15px;
+  .footer-container {
+    flex-direction: row;
+    text-align: left;
   }
+}
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .grid .card {
+    flex: 0 0 calc(50% - 20px);
+    max-width: 300px;
+  }
   .gamescard, .newscard {
-    flex: 1 1 45%; /* two cards per row */
+    flex: 1 1 45%;
   }
-
   .hero h1 {
     font-size: 2.2rem;
   }
 }
 
-/* TABLETS */
+/* Smaller Tablet */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
-
   .nav-links {
     flex-direction: column;
-    text-align: center;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 10px;
   }
-
-  .gamescard, .newscard {
-    flex: 1 1 100%; /* stack cards vertically */
-  }
-
-  .content {
+  .footer-container {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 20px;
   }
-
-  .btn {
-    width: 80%; 
-    margin: 10px 0;
+  .footer-section {
+    width: 100%;
+  }
+  .gamescard, .newscard {
+    flex: 1 1 100%;
   }
 }
 
-/* PHONES */
+/* Phone */
 @media (max-width: 480px) {
   body {
     font-size: 0.9rem;
     padding: 0 10px;
   }
-
   .hero h1 {
     font-size: 1.8rem;
     text-align: center;
   }
-
   .gamescard img, .newscard img {
     width: 100%;
     height: auto;
   }
-
   .btn {
-    width: 100%; 
+    width: 100%;
   }
+  .footer-container {
+    padding: 20px;
+  }
+}
 
-  footer .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
+/* On smaller screens, reduce spacing */
+@media (max-width: 768px) {
+  .about, .contact, .signup {
+    margin-top: 120px;
+    padding: 20px;
   }
 }
 
